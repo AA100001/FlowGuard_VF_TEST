@@ -117,7 +117,7 @@ with tab1:
                         # Display a benign GIF for clear visual feedback.
                         _, img_col, _ = st.columns([1, 1, 1])
                         with img_col:
-                            st.image("frontend/gifs/benign.gif")
+                            st.image("gifs/benign.gif")
                         st.metric(label="Confidence Score", value=f"{confidence * 100:.2f}%")
 
                     elif prediction.lower() in [p.lower() for p in predictions_malicious]:
@@ -125,7 +125,7 @@ with tab1:
                         # Display a malicious GIF for immediate attention.
                         _, img_col, _ = st.columns([1, 1, 1])
                         with img_col:
-                            st.image("frontend/gifs/malicious.gif")
+                            st.image("gifs/malicious.gif")
                         st.metric(label="Confidence Score", value=f"{confidence * 100:.2f}%", delta="High Risk", delta_color="inverse")
 
                     else:
